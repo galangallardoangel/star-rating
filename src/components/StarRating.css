@@ -1,0 +1,43 @@
+.star-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.star-button {
+  width: var(--star-size, 36px);
+  height: var(--star-size, 36px);
+  padding: 0;
+  border: none;
+  background: none;
+  color: #d1d5db;
+  cursor: pointer;
+  transition:
+    color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.star-button.active {
+  color: var(--star-color, #f59e0b);
+}
+
+.star-button:hover {
+  transform: scale(1.12);
+}
+
+.star-button:focus-visible {
+  outline: 2px solid var(--star-color, #f59e0b);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.rating-message {
+  font-size: 14px;
+  color: #555;
+}
